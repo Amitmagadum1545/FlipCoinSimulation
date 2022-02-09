@@ -11,16 +11,23 @@ namespace FlipCoinSimulation
         public static void GetHeadOrTail()
         {
             Random random = new Random();
-            int check = random.Next(0, 2);
-            int head = 1, tail = 0;
-            if (check == head)
+            int head = 1, tail = 0, headCount = 0, tailCount = 0;
+            for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine("Heads");
+                int check = random.Next(0, 2); 
+                if (check == head)
+                {
+                    headCount++;
+                    Console.WriteLine("Got Head, headCount: " + headCount);
+                }
+                else if (check == tail)
+                {
+                    tailCount++;
+                    Console.WriteLine("Got Tails, tailCount: " + tailCount);
+                }
             }
-            else if (check == tail)
-            {
-                Console.WriteLine("Tails");
-            }
+            Console.WriteLine("Number of Times Head Won: " + headCount);
+            Console.WriteLine("Number of Times Tail Won: " + tailCount);
         }
         
 
