@@ -11,6 +11,8 @@ namespace FlipCoinSimulation
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Flip Coin Simulation Program");
+            FlipCoin.GetHeadOrTail();
+            FlipCoin.Abc();
             Console.ReadLine();
         }
     }
